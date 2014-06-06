@@ -10,6 +10,6 @@ get '/' do
 end
 
 get '/contacts/:id' do
-
+  @contact = Contact.where("id = ?", params[:id])
   erb :show
 end
